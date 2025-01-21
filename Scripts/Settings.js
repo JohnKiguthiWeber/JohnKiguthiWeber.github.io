@@ -6,6 +6,8 @@ function darkMode() {
     document.getElementById('introBackground').style="color: black; background-color:black";
     document.getElementById('introText').style="color: white";
     document.getElementById('projects').style="color:white; background-color:black; border-color:black"
+    document.getElementById('Current').style="color:white;"
+    document.getElementById('Current').innerHTML='Current: dark'
     // document.getElementsByClassName('head').style="background-color: grey" This refused to work so i gave up
     
 }
@@ -18,6 +20,8 @@ function defaultMode() {
     document.getElementById('introBackground').style="color: white; background-color: white";
     document.getElementById('introText').style="color: black";
     document.getElementById('projects').style="color:black; background-color:white"
+    document.getElementById('Current').style="color:black;"
+    document.getElementById('Current').innerHTML='Current: default'
 }
 function lightMode() { 
     document.getElementById('pageBody').style="background-color: white";
@@ -27,4 +31,6 @@ function lightMode() {
     document.getElementById('introBackground').style="color: white; background-color:white";
     document.getElementById('introText').style="color: black";
     document.getElementById('projects').style="color:black; background-color:white"
+    document.getElementById('Current').style="color:black;"
+    document.getElementById('Current').innerHTML='Current: light'
 }
