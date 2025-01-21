@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en  ">
 
     <head>
-        <link rel="stylesheet" href="PortStyle.css">
+        <link rel="stylesheet" href="Styles/PortStyle.css">
         <meta charset="UTF-8">
         <meta name="viewport", content="width=device-width, initial-scale=1.0"> 
         <title>John's JavaScript Portfolio</title>
     </head>
-    <main>
-        <h1>John's JavaScript Portfolio</h1>
 
-        <img src="IDPhoto.jpg" height="300px" style="float: right;">
-        <p style='color: white; border-color: black; line-height: 300px; float: center;' > ew</p>
-        <p class='IDKwhatThisIs'>
-            Hello, my name is John Kiguthi. 
-            I am a freshman at Weber State University who is majoring in computer science and minoring in mathematics.
-            I have enjoyed math throught my whole life, and gained an interest in computer science during 7th grade.
-            During my free time I enjoy going on walks and playing video games.
-            This site has been developed to show projects produce for/during my WEB 1430 class.
-        </p>
+    <body id="pageBody">
+        
+            <h1 id="title">John's JavaScript Portfolio</h1>
 
-        <h2 style="border-top: none;">JavaScript Demonstrations</h2>
-        <p>Future Projects</p>
-    </main>
+            <img src="Images/IDPhoto.jpg" height="300px" style="float: right;">
+            <p id="introBackground"> ew</p>
+            <p id='introText'>
+                Hello, my name is John Kiguthi. 
+                I am a freshman at Weber State University who is majoring in computer science and minoring in mathematics.
+                I have enjoyed math throught my whole life, and gained an interest in computer science during 7th grade.
+                During my free time I enjoy going on walks and playing video games.
+                This site has been developed to show projects produce for/during my WEB 1430 class.
+            </p>
+
+            <h2 id="Demonstrations">JavaScript Demonstrations</h2>
+            <p id="projects">Future Projects</p>
+
+            <h2 id="Settings">Settings</h2>
+            <button onclick="defaultMode()">Default Mode</button>
+            <button onclick="darkMode()">Dark Mode</button>
+            <button onclick="lightMode()">Light Mode</button>
+
+            <script src="Scripts/Settings.js"></script>        
+    </body>
 </html>
