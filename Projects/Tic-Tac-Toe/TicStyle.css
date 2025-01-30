@@ -1,0 +1,18 @@
+body {
+    background-color: bisque;
+}
+
+
+button { 
+    width: 50px; 
+    height: 50px;  
+    align-content: center; 
+    background-color: azure; 
+    font-size:42px;
+}
+
+#reset{ 
+    width: 162px; 
+    height: 50px; 
+    background-color: plum; 
+    font-size: medium;} 
