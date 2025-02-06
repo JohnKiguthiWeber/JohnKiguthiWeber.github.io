@@ -1,10 +1,10 @@
 let dataSet = [];
 
 function addValue(){
-    let inpVal = parseFloat(document.getElementById('value').value) // Convert the user input to a number 
+    let inpVal = document.getElementById('value').value
 
-    if (!(isNaN(inpVal/2))){ // and validate to ensure it is numerical original coad i did -> parseInt(inpVal) % 2 == 0 ||  parseInt(inpVal) % 2 == 1
-        dataSet.push(inpVal);
+    if (!(isNaN(inpVal/2))){ // Convert the user input to a number and validate to ensure it is numerical original coad i did -> parseInt(inpVal) % 2 == 0 ||  parseInt(inpVal) % 2 == 1
+        dataSet.push(parseFloat(inpVal));
         setMean()
         // console.log(document.getElementById('value').value / 2)
     }
