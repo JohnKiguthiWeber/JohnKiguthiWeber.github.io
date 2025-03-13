@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Puzzle</title>
+        <style>
+            /* NOTE: Do NOT modify this stylesheet */
+            #puzzle { width: 500px; height: 500px; border: 5px solid black; 
+            }
+        </style>
+    </head>
+    <body>
+        <!-- NOTE: Do NOT modify the body or div -->
+        <div id='puzzle'></div>
+
+        <script>
+            // All puzzle code must be implemented here
+
+            const puzzle = document.getElementById('puzzle');
+            puzzle.style = "background-color: #7338A0;"
+
+            function startup() {
+                puzzle.addEventListener('mouseover', ()=> {
+                    puzzle.style = 'border-color: #FF9E00; background-color: #7338A0;';
+                })
+                puzzle.addEventListener('mouseout', ()=> {
+                    puzzle.style = 'border-color: black; background-color: #7338A0;';
+                })
+                
+                puzzle.before(addText('DOM Puzzle', 'h1'));
+
+                bigButton('A', '#9455F4');
+                bigButton('B', '#4A2B74');
+                puzzle.appendChild(bigEmpty());
+                bigButton('C', '#594492');
+                bigButton('D', '#854DDc');
+                puzzle.appendChild(bigEmpty())
+
+                const littleButtonSpace = document.createElement('div');
+                littleButtonSpace.style = "width: 250px; height: 250px; background-color: clear; float: right;";
+                puzzle.appendChild(littleButtonSpace)
+
+                for (let i = 0; i < 100; i ++){
+                    littleButtonSpace.appendChild(littleButton());
+                }
+
+                puzzle.after(addText('This is a puzzle created entirely within JavaScript.', 'p'));
+            }
+
+            function addText(text, element) {
+                const newText = document.createElement(element);
+                newText.textContent = text;
+
+                return newText;
+            }
+
+            function bigButton(text, color) {
+                const big = document.createElement('button');
+                big.style = 'width: 125px; height: 125px; background-color: ' + color + ';' ;
+                big.textContent = text;
+
+                puzzle.appendChild(big);
+            }
+            function bigEmpty(){
+                const big = document.createElement('div');
+                big.style = 'width: 24px; height: 0px; background-color: black;';
+ 
+                return big;
+            }
+
+            function littleButton(){
+                const little = document.createElement('button')
+                little.style = 'width: 25px; height: 24px; background-color: #C39CfE;';
+                // little.addEventListener('click', () => { this.style = 'background-color: red;'; console.log('red') } ); 
+                little.setAttribute('onclick', 'colorChanger(this)')
+
+                return little;
+            }
+
+            function colorChanger(element) {
+                element.style.backgroundColor = '#4A2574';
+
+                before = element.previousElementSibling;
+                if (before !== null){
+                    before.style.backgroundColor = '#FF9E00'
+                }
+
+                after = element.nextElementSibling;
+                if (after !== null){
+                    after.style.backgroundColor = '#FF9E00'
+                }
+            }
+
+            startup();
+        </script>
+    </body>
+</html>
