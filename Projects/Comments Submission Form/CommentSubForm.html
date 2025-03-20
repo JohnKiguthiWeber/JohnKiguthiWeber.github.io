@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0"> 
+        <title>Comment Submission Form</title>
+        <style>
+            input:invalid {
+				border: 2px solid red;
+			}
+        </style>
+    </head>
+    <body>
+
+        <form id="form">
+			<label for="name">Name:</label>
+			<input 
+				id="name" 
+				name="userName"
+				type="text"
+                pattern="[a-zA-Z ]{1,100}"
+                title="Please enter a name that only contains letters, and spaces."
+			> 
+			<br><br>
+
+            <label for="phonenumber">Phonenumber:</label>
+			<input 
+				id="Phonenumber" 
+				name="userPhonenumber"
+				type="tel"
+                pattern="[0-9\-\+ ]{1,20}" 
+                placeholder="###-###-####"
+                
+                title="Please enter a valid phonenumber."
+			> 
+			<br><br>
+
+            <label for="email">Email:</label>
+			<input 
+				id="email" 
+				name="userEmail"
+				type="email"
+                placeholder="email@service.com"
+                
+                title="Please enter a valid phonenumber."
+			> 
+			<br><br>
+
+            <label for="username">Username:</label>
+			<input 
+				id="username" 
+				name="userUsername"
+                pattern="[a-zA-Z0-9_]{1,100}"
+                title="Please enter a valid username."
+			> 
+            <div id="userCheck"></div>
+			<br><br>
+
+            <label for="password">Password:</label>
+			<input 
+				id="password" 
+				name="userpassword"
+				type="text"
+                
+                title="Please enter a valid password."
+			> 
+            <div id="passwordCheck"></div>
+			<br><br>
+            
+            <h2>Leave a Comment</h2>
+            <input type="text" id="comment" placeholder="Enter your comment">
+            <br><br>
+            <!-- <div id="comments"></div> -->
+            <button type="submit" id="submit">Submit</button>
+
+		</form>
+
+        <!-- <button id="submit">Submit</button> Debug button -->
+
+        <script src="CommentSubScript.js"></script>
+    </body>
+</html>
