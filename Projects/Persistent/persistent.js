@@ -134,7 +134,8 @@ async function getMotivation() {
 
 
     } catch (error) {
-        console.log(error + "  Error fetching the weather.");
+        console.log("Failed to get quote");
+        document.getElementById('motivation').innerHTML = "Failed to get quote";
     }
 
 }
