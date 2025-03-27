@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0"> 
+        <title>Persistent</title>
+    </head>
+    <body>
+
+        <h2>List</h2>
+        <p>Items added this session: <span id="added">0</span> </p>
+        <input type="text" id="input">
+        <br><br>
+        <ol id="list"></ol>
+        <button onclick="addToList()">Add</button>
+        <button onclick="removeFromList()">Remove</button>
+        <button onclick="clearList()">Reset</button>
+        <br></br>
+
+        <button onclick="toggleMode()">Toggle Bright/Dark</button>
+
+        <br></br>
+        <p>Motivation: <span id="motivation"></span></p>
+        <script src="persistent.js"></script>
+    </body>
+</html>
