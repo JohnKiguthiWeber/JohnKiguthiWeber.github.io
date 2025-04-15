@@ -88,7 +88,17 @@
                 if (after !== null){
                     after.style.backgroundColor = '#FF9E00'
                 }
+
+                let above = element.previousElementSibling
+
+                for (let i = 0; i < 9; i++) {
+                    above = above.previousElementSibling;
+                }
+                if (above !== null){
+                    above.style.backgroundColor = '#FF9E00'
+                }
             }
+
 
             startup();
         </script>
