@@ -18,16 +18,25 @@
         }
          
         body {
-            background-color: '#5e7d79';
+            background-color: #5e7d79;
         }
     </style>
 </head>
 <body>
     <h3>Choose the color of the brush:</h3>
     <div id="colorPalette"></div>
+    <input id="brushThing"> 
+    <button type="submit" id="brushButton" onclick="changeBrush()">Change brush width</button>
 
     <div id="drawingTable"></div>
     
-    <button onclick="saveBoard()">save</button>
+    <button onclick="saveBoard()">Save</button>
+    <button onclick="loadBoard()">Load</button>
+    <button onclick="clearBoard()">Clear</button>
+
+    <br><br>
+
+    <button onclick="eraser()">Eraser</button>
+
 </body>
 </html>
